@@ -32,3 +32,15 @@ VS Code doesn't auto-detect a venv named `.venv_helper`. Run **Python: Select In
 **Updating requirements**
 
 If you install a new package, add it to `requirements.txt` with its version (`pip show <package>` gives the version).
+
+**Getting the latest changes**
+
+When someone updates `requirements.txt`, pull the changes and reinstall into your existing venv:
+
+```powershell
+git pull
+.\.venv_helper\Scripts\activate
+pip install -r requirements.txt
+```
+
+pip only installs or upgrades what's changed. It won't remove packages that were taken out of `requirements.txt`, so if you want an exact match, delete the `.venv_helper` folder and recreate it with the setup steps above.
