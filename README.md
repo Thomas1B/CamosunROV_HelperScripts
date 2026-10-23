@@ -14,7 +14,7 @@ Run these from the `CamosunROV_HelperScripts` folder.
 
 ```powershell
 py -3.14 -m venv .venv_helper
-.\.venv_helper\Scripts\Activate.ps1
+.\.venv_helper\Scripts\activate
 python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
